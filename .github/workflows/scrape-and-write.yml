@@ -19,3 +19,9 @@ jobs:
           pip install -r requirements.txt
       - name: Run script
         run: python writer.py
+      - name: check for changes
+        run: git status
+      - name: stage changed files
+        run: git add .
+      - name: commit changed files
+        run: git commit -m "Updating data"
