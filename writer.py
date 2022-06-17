@@ -26,7 +26,7 @@ def write():
                 fp.write(
                     str(biodata_number)
                 )
-
+        break
 
 if __name__ == "__main__":
     if not os.path.isdir("data"):
