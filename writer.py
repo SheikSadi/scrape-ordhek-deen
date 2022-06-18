@@ -1,8 +1,13 @@
 import os
+import time
+import logging
+
 from scraper import scrape
 
 
 def write():
+    started = time.time()
+    
     with open("last biodata_number.txt", "r") as fp:
         biodata_number = int(
             fp.read()
@@ -26,6 +31,12 @@ def write():
                 fp.write(
                     str(biodata_number)
                 )
+                logging.info(f"Scraped biodata: {biodata_number}")
+                
+        time_now = time.time()
+        
+        if time_now - started > 3600:
+            break
 
 
 if __name__ == "__main__":
