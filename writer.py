@@ -1,6 +1,5 @@
 import os
 import time
-import logging
 
 from scraper import scrape
 
@@ -31,7 +30,7 @@ def write():
                 fp.write(
                     str(biodata_number)
                 )
-                logging.info(f"Scraped biodata: {biodata_number}")
+                print(f"Scraped biodata: {biodata_number}")
                 
         time_now = time.time()
         
