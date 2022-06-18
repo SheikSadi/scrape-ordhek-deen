@@ -41,4 +41,5 @@ def write():
 if __name__ == "__main__":
     if not os.path.isdir("data"):
         os.mkdir("data")
+    print("Let's scrape ordhekdeen!")
     write()
